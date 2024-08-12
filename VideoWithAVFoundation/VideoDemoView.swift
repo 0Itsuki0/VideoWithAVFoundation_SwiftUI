@@ -73,12 +73,9 @@ struct VideoDemoView: View {
                     
                     HStack {
                         Button(action: {
-                            if isPlayingBackward {
-                                return
-                            } else {
-                                isPlayingBackward = true
-                                fastPlay()
-                            }
+                            stopPlaying()
+                            isPlayingBackward = true
+                            fastPlay()
                         }, label: {
                             Image(systemName: "backward.fill")
                         })
@@ -89,12 +86,9 @@ struct VideoDemoView: View {
                         
                         
                         Button(action: {
-                            if isPlayingBackward {
-                                return
-                            } else {
-                                isPlayingBackward = true
-                                play()
-                            }
+                            stopPlaying()
+                            isPlayingBackward = true
+                            play()
                         }, label: {
                             Image(systemName: "play.fill")
                                 .scaleEffect(x: -1)
@@ -119,12 +113,9 @@ struct VideoDemoView: View {
                         
 
                         Button(action: {
-                            if isPlayingForward {
-                                return
-                            } else {
-                                isPlayingForward = true
-                                play()
-                            }
+                            stopPlaying()
+                            isPlayingForward = true
+                            play()
                         }, label: {
                             Image(systemName: "play.fill")
                         })
@@ -133,12 +124,9 @@ struct VideoDemoView: View {
                         .background(Circle().fill(.black))
                         
                         Button(action: {
-                            if isPlayingForward {
-                                return
-                            } else {
-                                isPlayingForward = true
-                                fastPlay()
-                            }
+                            stopPlaying()
+                            isPlayingForward = true
+                            fastPlay()
                         }, label: {
                             Image(systemName: "forward.fill")
                         })
